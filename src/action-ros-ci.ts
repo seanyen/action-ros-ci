@@ -85,7 +85,6 @@ async function run() {
 
 		const colconMixinName = core.getInput("colcon-mixin-name");
 		const colconMixinRepo = core.getInput("colcon-mixin-repository");
-		const extraCmakeArgs = core.getInput("extra-cmake-args");
 		const packageName = core.getInput("package-name", { required: true });
 		const packageNameList = packageName.split(RegExp("\\s"));
 		const rosWorkspaceName = "ros_ws"
