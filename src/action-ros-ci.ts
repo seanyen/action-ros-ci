@@ -219,10 +219,7 @@ async function run() {
 		// where this does not happen. See issue #26 for relevant CI logs.
 		core.addPath(path.join(rosWorkspaceDir, "install", "bin"));
 
-		let colconBuildCmd = `colcon build --event-handlers console_cohesion+ --symlink-install \
-			--packages-up-to ${packageNameList.join(" ")} \
-			${extra_options.join(" ")} \
-			--cmake-args ${extraCmakeArgs}`;
+		let colconBuildCmd = `colcon build --packages-up-to ${packageNameList.join(" ")}`;
 		await execBashCommand(colconBuildCmd, commandPrefix, options);
 
 		// ignoreReturnCode is set to true to avoid having a lack of coverage
