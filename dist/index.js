@@ -4491,7 +4491,6 @@ function execBashCommand(commandLine, commandPrefix, options, log_message) {
             // This passes the same flags to cmd.exe that "run:" in a workflow.
             // https://help.github.com/en/actions/automating-your-workflow-with-github-actions/workflow-syntax-for-github-actions#using-a-specific-shell
             toolRunnerCommandLineArgs = [
-                "/D",
                 "/E:ON",
                 "/V:OFF",
                 "/S",
