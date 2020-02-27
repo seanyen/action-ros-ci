@@ -134,6 +134,12 @@ async function run() {
 		};
 
 		await execBashCommand(
+			`export`,
+			commandPrefix,
+			options
+		);
+
+		await execBashCommand(
 			`curl '${vcsRepoFileUrl}' | vcs import src/`,
 			commandPrefix,
 			options
