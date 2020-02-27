@@ -51,6 +51,7 @@ export async function execBashCommand(
 		// This passes the same flags to cmd.exe that "run:" in a workflow.
 		// https://help.github.com/en/actions/automating-your-workflow-with-github-actions/workflow-syntax-for-github-actions#using-a-specific-shell
 		toolRunnerCommandLineArgs = [
+			"/D",
 			"/E:ON",
 			"/V:OFF",
 			"/S",
@@ -59,7 +60,7 @@ export async function execBashCommand(
 			"%programfiles(x86)%\\Microsoft Visual Studio\\2019\\Enterprise\\VC\\Auxiliary\\Build\\vcvarsall.bat",
 			"amd64",
 			"&",
-			"C:\\Program Files\\Git\\bin\\bash.exe",
+			"bash",
 			"-c",
 			bashScript
 		];
