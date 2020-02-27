@@ -60,7 +60,7 @@ export async function execBashCommand(
 			"%programfiles(x86)%\\Microsoft Visual Studio\\2019\\Enterprise\\VC\\Auxiliary\\Build\\vcvarsall.bat",
 			"amd64",
 			"&",
-			"bash",
+			"C:\\Program Files\\Git\\bin\\bash.exe",
 			"-c",
 			bashScript
 		];
